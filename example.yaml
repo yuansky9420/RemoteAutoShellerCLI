@@ -1,0 +1,15 @@
+ssh:
+  host: "localhost"  # 指定你的服务器地址
+  port: 22
+  user: "user"  # 登录用户名
+  password: "user123" # 登录密码
+
+tasks:
+  - name: "远程脚本自动任务测试"
+    cmd: "uname -a"
+    probe_timeout: 2
+    probe_interval: 2
+    probe_retries: 200
+    probes:
+      - type: "http"
+        url: "https://www.baidu.com/"
