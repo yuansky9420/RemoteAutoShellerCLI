@@ -5,11 +5,15 @@ ssh:
   password: "user123" # 登录密码
 
 tasks:
-  - name: "远程脚本自动任务测试"
-    cmd: "uname -a"
-    probe_timeout: 2
-    probe_interval: 2
-    probe_retries: 200
-    probes:
-      - type: "http"
-        url: "https://www.baidu.com/"
+  - name: "远程脚本自动任务测试"        # 任务名称
+    cmd: "uname -a"                   # 运行命令
+    probe_timeout: 2                  # 探测超时时间
+    probe_interval: 2                 # 探测间隔时间
+    probe_retries: 200                # 探测重试次数
+    probes:                           # 服务存活探测
+      - type: "http"                  # http探测
+        url: "https://www.baidu.com/" # 探测地址
+      
+      # 还可以同时添加多个探测点
+      - type: "http"                  # http探测
+        url: "https://www.aliyun.com/" # 探测地址

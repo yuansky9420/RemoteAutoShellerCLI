@@ -4,7 +4,7 @@
 # @Intsall : pip install paramiko requests pyyaml
 # @Name    : RemoteSheller.py
 # @Description: 批量远程执行SSH命令，并添加探活功能
-# @Version: 1.0.0
+# @Version: 1.0.0 alpha
 # @Documentation: Readme.md
 
 import paramiko
