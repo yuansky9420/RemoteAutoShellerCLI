@@ -1,0 +1,8 @@
+# 忽略Python虚拟环境
+.venv/
+
+# 忽略生产环境的配置文件
+config.yaml
+
+# 忽略Python字节码文件
+*.pyc
